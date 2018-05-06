@@ -1,0 +1,90 @@
+.page
+	position: relative
+	min-height: 100vh
+	min-width: 100vw
+	height: auto
+	width: 100%
+	background: transparent
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: hidden
+	display: flex
+	justify-content: center
+	align-items: center
+	align-self: center
+	justify-content: center
+	align-items: center
+	h1
+		font-size: 16px
+		font-weight: 300
+		color: white
+	+sm
+		h1
+			font-size: 1.3em
+	+md
+		h1
+			font-size: 1.8em
+	h5, h1
+		margin: 0
+	h5
+		color: $dark-blue
+		font-size: 1em
+		background: $lighter-dark
+	h2
+		font-size: 3em
+	p
+		font-size: 1em
+		font-weight: 400
+
+.row
+	width: 100%
+	display: flex
+	justify-content: flex-start
+	flex: 0 0 100%
+	align-items: center
+
+.col
+	flex: 1 1 auto
+	pointer-events: none
+
+.row_bg
+	height: 100%
+	position: absolute
+	opacity: .05
+	z-index: 7777
+	pointer-events: none
+	.col
+		border-right: 1px solid white
+		height: 100%
+
+.parent
+	margin-bottom: 100vh
+	z-index: 999
+	background: $lighter-dark
+	position: relative
+
+.col_short
+	width: 100%
+	+sm
+		width: 100%
+	+md
+		width: 30px
+
+.page__content
+	.col
+		align-items: center
+
+.number
+	color: $toned-red
+	font-size: 0.8em
+
+.divider
+	color: $dark-blue
+	font-size: 0.8em
+
+.additional
+	font-weight: 400
+	font-size: 0.8em
+	color: $dark-blue

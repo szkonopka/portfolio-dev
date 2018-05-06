@@ -1,0 +1,314 @@
+.projects
+	position: relative
+	margin: 50px
+
+.projects
+	width: 900px
+	height: auto
+	overflow: hidden
+
+#project-intro
+	background: $lighter-dark
+	&:before
+		z-index: 0
+		width: 100%
+		height: 100%
+		position: absolute
+		content: ''
+		//background: $lighter-dark
+		opacity: .7
+
+.project__header
+	z-index: 1
+	max-width: 900px
+	margin-left: auto
+	margin-right: auto
+	//background: white
+	padding: 36px
+	animation: 1s ease-in-out 0s 1 objectIn
+	p, h4
+		color: $lighter-dark
+		//color: white
+	p
+		font-weight: 300
+		font-size: 14px
+	h4
+		color: $toned-red
+		letter-spacing: 8px
+		font-size: 14px
+		font-weight: 900
+	h1
+		color: $lighter-dark
+		font-weight: 300
+		//color: white
+	P, h4, h1
+		margin-top: 10px
+	h1
+		font-size: 36px
+		font-weight: 300
+		+sm
+			font-size: 48px
+		+md
+			font-size: 60px
+	p
+		+sm
+			font-size: 1.3em
+		+md
+			font-size: 1.5em
+
+
+.btn
+	display: inline-block
+	padding: 12px 24px
+	border: 1px solid $lighter-dark
+	//border: 1px solid white
+	cursor: pointer
+	width: calc(210px - 48px)
+	color: $lighter-dark
+	//color: white
+	margin-top: 24px
+	cursor: pointer
+	pointer-events: auto
+	font-size: 12px
+	+sm
+		font-size: 14px
+	+md
+		font-size: 16px
+
+#project
+	min-height: auto
+	padding-top: 36px
+	padding-bottom: 72px
+	background: $lighter-dark
+	align-items: flex-start
+	+sm
+		padding-top: 54px
+		padding-bottom: 54px
+	+md
+		padding-top: 72px
+		padding-bottom: 72px
+	.col
+		padding-left: 24px
+		padding-right: 24px
+		max-width: 1200px
+		position: relative
+		margin-left: auto
+		margin-right: auto
+	img
+		width: 100%
+
+.project__photo
+	position: relative
+	margin-top: 2em
+	img
+		height: 100%
+
+.browser-bar
+  position: absolute
+  width: 100%
+  height: 1.5em
+  background: $dark-blue
+  top: -1.5em
+  border-top-left-radius: 8px
+  border-top-right-radius: 8px
+
+#project-intro
+	.vertical-nav
+		position: fixed
+	#logo
+		span
+			color: $dark-blue
+
+.project__gallery
+
+.project__photo
+	img
+		width: 100%
+
+#details
+	background: $toned-red
+	padding: 120px 0
+	+sm
+		padding: 120px
+	+md
+		padding: 120px
+	.row
+		margin-left: auto
+		margin-right: auto
+		max-width: 900px
+		flex-wrap: wrap
+		align-items: flex-start
+		.col
+			width: 100%
+			text-align: center
+			justify-content: center
+			+sm
+				max-width: calc(33.333% - 32px)
+				text-align: left
+				margin-left: 32px
+			+md
+				max-width: calc(33.333% - 32px)
+				text-align: left
+				margin-left: 32px
+	h3
+		text-transform: uppercase
+		letter-spacing: 1.5
+		color: $lighter-dark
+		font-size: 14px
+	p
+		font-size: 16px
+		font-weight: 400
+
+.parent-project
+	#logo
+		a
+			color: $lighter-dark
+
+.swapper
+	position: absolute
+	top: 0
+	bottom: 0
+	width: 100%
+	height: 400%
+	z-index: 9999
+	background: $toned-red
+
+.swapper_left
+	animation: 1s ease-in-out 0s 1 swapLeft
+
+.swapper_right
+	animation: 1s ease-in-out 0s 1 swapRight
+
+@keyframes swapLeft
+	0%
+		left: -100%
+	50%
+		left: 0
+	100%
+		left: 100%
+
+@keyframes swapRight
+	0%
+		right: -100%
+	50%
+		right: 0
+	100%
+		right: 100%
+
+@keyframes coverIn
+	from
+		opacity: 0
+	to
+		opacity: 1
+
+.cover
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	width: 100%
+	height: 400%
+	z-index: 9998
+	background: $lighter-dark
+	animation: 1s ease-in-out 0s 1 coverIn
+
+.vertical-nav_prev
+	top: auto
+	bottom: 0
+	left: 0
+	background: $lighter-dark
+	overflow: hidden
+	animation: 1s ease-in-out 0s 1 leftIn
+
+.wrapper_project
+	.vertical-nav
+		cursor: pointer
+		display: flex
+		padding: 24px 36px
+		a
+			font-weight: 700
+			letter-spacing: 8px
+	.vertical-nav__opt
+		padding: 0
+		text-align: center
+		overflow: visible
+		a
+			&:after
+				display: none
+	.vertical-nav_prev
+		a
+			padding-right: 15px
+			i
+				left: auto
+				right: -15px
+	.vertical-nav_next
+		a
+			padding-left: 15px
+			i
+				left: -15px
+				right: auto
+	.vertical-nav_next, .vertical-nav_prev
+		width: calc(50% - 72px)
+		font-size: 12px
+		+sm
+			width: 90px
+			max-width: 50%
+			font-size: 14px
+		+md
+			width: 90px
+			max-width: 50%
+			font-size: 14px
+
+.vertical-nav_next
+	top: auto
+	right: 0
+	bottom: 0
+	background: $lighter-dark
+	overflow: hidden
+	animation: 1s ease-in-out 0s 1 rightIn
+
+#animation
+	position: absolute
+	width: 100%
+	height: 100%
+	overflow: hidden
+	top: 0
+	left: 0
+	right: 0
+
+.wrapper_project
+	#fullpage
+		margin-bottom: 0
+
+.buttons
+	flex-wrap: wrap
+	a
+		text-decoration: none
+	.col
+		max-width: 210px
+		margin-right: auto
+		margin-left: auto
+		text-align: center
+		+sm
+			margin-left: 0
+			margin-right: 15px
+		+md
+			margin-right: 15px
+			margin-left: 0
+
+#counter
+	position: absolute
+	right: 0
+	top: 0
+	margin: 36px
+	dl
+		margin: 0
+	dt
+		color: $lighter-dark
+		font-weight: 900
+
+.wrapper_project
+	.animated
+		&:after
+			background: $lighter-dark

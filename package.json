@@ -1,0 +1,32 @@
+{
+  "name": "szkonopka.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start:dev": "webpack-dev-server"
+  },
+  "author": "Szymon Konopka",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.8.3",
+    "open-browser-webpack-plugin": "0.0.5",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "styled-components": "^3.2.6",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.0.14",
+    "webpack-dev-server": "^3.1.3"
+  },
+  "dependencies": {
+    "file-loader": "^1.1.11",
+    "three": "^0.92.0",
+    "uglifyjs-webpack-plugin": "^1.2.5"
+  }
+}

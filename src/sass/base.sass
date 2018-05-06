@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i')
+@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i,700|Tinos:400,400i,700,700i&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Eczar:400,500,600,700,800&subset=latin-ext')
+@import url('https://fonts.googleapis.com/css?family=Amiri:400,400i,700,700i&subset=latin-ext')
+
+body
+	padding: 0
+	margin: 0
+	font-family: 'Roboto', sans-serif
+	color: white
+	background: $lighter-dark
+	font-weight: 400
+	letter-spacing: 0.08425em
+	line-height: 1.5
+	overflow-x: hidden
+	-webkit-font-smoothing: antialiased
+
+.wrapper
+	animation: 0.3s ease-in-out 0s 1 pageIn
+
+.ref
+	color: $aqua-green
+	text-decoration: underline
+	cursor: pointer
+
+#backgroundcanvas
+	position: absolute
+	width: 100%
+	height: 400%
+	opacity: .2
+	z-index: 99999
+	pointer-events: none
+
+#fullpage
+	margin-bottom: 100vh
+	z-index: 999
+	background: $lighter-dark
+	//overflow: hidden
+
+.decorated
+	color: $toned-red

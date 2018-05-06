@@ -1,0 +1,172 @@
+.about__header
+	@media (max-width: 205px)
+		margin-top: 50px
+	margin: 36px
+	margin-top: 80px
+	padding-top: 100px
+	@media (min-width: 205px) and (max-width: 310px)
+		margin-top: 130px
+	+sm
+		margin-left: 50px
+		margin-right: 50px
+		margin-top: 130px
+		padding-top: 100px
+	+md
+		margin-left: 105px
+		margin-right: 105px
+		margin-top: 160px
+		padding-top: 100px
+	position: relative
+	z-index: 999
+	max-width: 900px
+	margin-bottom: 100px
+	text-align: center
+	h1
+		background: $lighter-dark
+	animation: 1s ease-in-out 0s 1 objectIn
+
+#logo
+	position: absolute
+	margin: 36px
+	left: 0
+	top: 0
+	cursor: pointer
+	animation: 1s ease-in-out 0s 1 leftIn
+	span
+		display: block
+		color: $dark-blue
+		text-decoration: none
+		position: absolute
+		top: 0
+		left: 50px
+		max-width: 120px
+		@media (max-width: 270px)
+			display: none
+
+
+
+#work-link
+	position: absolute
+	margin: 36px
+	right: 0
+	top: 0
+	animation: 1s ease-in-out 0s 1 rightIn
+	cursor: pointer
+	a
+		pointer-events: none
+		color: $dark-blue
+		text-decoration: none
+		transition: .3s color ease-in-out
+	&:hover
+		transition: .3s color ease-in-out
+		a
+			color: white
+
+.vertical-nav
+	position: absolute
+	top: 50%
+	padding: 0
+	z-index: 9999
+	//animation: 1s ease-in-out 0s 1 rightIn
+
+.vertical-nav__opt
+	position: relative
+	display: inline-block
+	float: left
+	color: white
+	//color: $lighter-dark
+	overflow: hidden
+	padding-left: 24px
+	a
+		text-decoration: none
+		color: white
+		font-size: 0.8em
+		position: relative
+		//color: $lighter-dark
+		i
+			content: ''
+			position: absolute
+			left: -15px
+			width: 8px
+			height: 8px
+			background: $toned-red
+			top: 50%
+			transform: translate(0, -50%) rotate(45deg)
+			transition: transform .3s ease-in-out
+		&:after
+			content: ''
+			position: absolute
+			width: 0%
+			height: 100%
+			left: -120%
+			top: 0
+			background: white
+			transition: width .3s ease-in-out
+			z-index: -1
+		&:hover
+			i
+				transform: translate(0, -50%) rotate(135deg)
+				transition: transform .3s ease-in-out
+			&:after
+				width: 100%
+				animation: .5s ease-in-out 0s 1 blinkEnter
+				//animation-fill-mode: both
+				animation-play-state: running
+		&:not(:hover)
+			&:after
+				width: 100%
+				animation: .5s ease-in-out 0s 1 blinkOut
+				//animation-fill-mode: both
+				animation-play-state: running
+
+
+.vertical-nav_info
+	animation: 1s ease-in-out 0s 1 leftIn
+	bottom: 0
+	left: 0
+	position: absolute
+	z-index: 9999
+	.vertical-nav
+		left: 0
+		position: absolute
+		bottom: 0
+		left: 0
+		margin: 24px
+		top: auto
+		padding: 0
+		+sm
+			margin: 40px
+			padding: 0
+		+md
+			bottom: auto
+			left: 0
+			top: 50%
+			transform-origin: 0 56%
+			transform: rotate(-90deg) translate(-50%, 0	)
+			-webkit-transform: rotate(-90deg) translate(-50%, 0	)
+			-moz-transform: rotate(-90deg) translate(-50%, 0	)
+			-ms-transform: rotate(-90deg) translate(-50%, 0	)
+			-o-transform: rotate(-90deg) translate(-50%, 0	)
+			left: 0
+	+sm
+	+md
+		top: 50%
+		bottom: auto
+		transform: translate(-50%, -50%)
+
+.animated
+	position: relative
+	overflow: hidden
+	display: inline-flex
+	&:after
+		content: ''
+		position: absolute
+		height: 100%
+		left: -100%
+		top: 0
+		background: white
+		transition: width .3s ease-in-out
+		z-index: 999
+		width: 100%
+		animation: .5s ease-in-out 0s 1 blinkEnter
+		animation-delay: 1s

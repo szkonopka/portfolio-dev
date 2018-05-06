@@ -1,0 +1,188 @@
+.skills
+	align-items: stretch
+	flex-wrap: wrap
+	margin-top: 15px
+	margin-bottom: 15px
+	ul
+		list-style-type: none
+		padding-left: 0
+		font-weight: 300
+		text-align: left
+		li
+			position: relative
+			padding-left: 15px
+			&:before
+				content: ''
+				position: absolute
+				left: 0
+				top: 50
+				height: 3px
+				width: 5px
+				background: $toned-red
+				transform: translate(-50%, 0)
+	.col
+		justify-content: flex-start
+		text-align: left
+	.col_short
+		max-width: 260px
+	p
+		font-weight: 300
+		color: white
+		text-align: left
+	h3
+		margin-top: 0
+		color: $toned-red
+		font-weight: 900
+		font-size: 12px
+		letter-spacing: 6px
+		text-transform: uppercase
+	p
+		font-size: 10px
+	+sm
+		h3
+			font-size: 1.3em
+		p
+			font-size: 1.1em
+	+md
+		h3
+			font-size: 1.5em
+		p
+			font-size: 1.3em
+
+dl
+	color: $toned-red
+	font-weight: 400
+dt
+	font-weight: 300
+	color: white
+	display: inline
+	font-size: 0.8em
+	+sm
+		font-size: 1em
+	+md
+		font-size: 1em
+
+.skills
+	margin-top: 0
+	margin-bottom: 80px
+	margin-left: auto
+	margin-right: auto
+	width: 100%
+	+sm
+		max-width: 1400px
+		margin-top: 80px
+	+md
+		max-width: 1400px
+		margin-top: 80px
+	.col
+		max-width: 100%
+		margin-top: 32px
+		+sm
+			max-width: calc(33.3333% - 64px)
+			padding: 32px
+		+md
+			max-width: calc(33.3333% - 64px)
+			padding: 32px
+
+.skill
+	p
+		font-size: 0.8em
+		color: $blue-gray
+
+#footer
+	z-index: 0
+	background: $lighter-dark
+	position: fixed
+	min-height: 100vh
+	height: auto
+	overflow: hidden
+	width: 100%
+	bottom: 0
+	left: 0
+	right: 0
+	h4
+		border-top: 1px solid $dark-blue
+		text-align: center
+		padding: 24px
+		background: $lighter-dark
+		z-index: 999
+	.link
+		color: white
+		position: relative
+		transform: none
+		pointer-events: auto
+		&:before
+			content: ''
+			width: 100%
+			height: 2px
+			opacity: 0
+			bottom: -10%
+			position: absolute
+			background: $dark-blue
+			transition: all .3s ease-in-out
+			transform: none
+			left: 0
+			z-index: -1
+		&:hover
+			&:before
+				bottom: -8px
+				opacity: 1
+				transition: all .3s ease-in-out
+	&:hover
+		opacity: 1
+	.page__content
+		width: 100%
+		padding: 36px
+		h1
+			text-align: center
+			max-width: 600px
+			margin-left: auto
+			margin-right: auto
+			font-size: 14px
+			+sm
+				font-size: 1.3em
+			+md
+				font-size: 1.5em
+
+.footer__credentials
+	z-index: 999
+	padding: 24px
+	text-align: center
+	align-items: center
+	position: absolute
+	bottom: 0
+	color: $dark-blue
+	p
+		display: inline-block
+		font-size: 12px
+		font-weight: 400
+		padding-left: 12px
+		padding-right: 12px
+	a
+		color: $toned-red
+
+.links
+	pointer-events: none
+	align-items: flex-start
+	max-width: 900px
+	a
+		font-weight: 400
+		text-decoration: none
+		position: relative
+		cursor: pointer
+		pointer-events: auto
+		overflow: hidden
+	p
+		display: inline-block
+		float: left
+		font-size: 12px
+		padding-left: 6px
+		padding-right: 6px
+		+sm
+			font-size: 1.1em
+			padding-left: 16px
+			padding-right: 16px
+		+md
+			font-size: 1.3em
+			padding-left: 16px
+			padding-right: 16px
