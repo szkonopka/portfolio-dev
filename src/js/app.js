@@ -199,6 +199,8 @@ window.onload = function() {
 		});
 	}
 
+	requestAnimationFrame(changeFooterHeader);
+
 	function changeFooterHeader(event) {
 		if(footerHeader !== null && footerHeader !== undefined) {
 			currentWidth = window.innerWidth;
@@ -234,8 +236,6 @@ window.onload = function() {
 		projectContainer.appendChild(swapper);
 		projectContainer.appendChild(cover);
 		setTimeout(() => {
-			projectContainer.removeChild(cover);
-			projectContainer.removeChild(swapper);
 			window.location.href = destination;
 		}, 1000);
 	}
@@ -250,8 +250,6 @@ window.onload = function() {
 		projectContainer.appendChild(swapper);
 		projectContainer.appendChild(cover);
 		setTimeout(() => {
-			projectContainer.removeChild(cover);
-			projectContainer.removeChild(swapper);
 			window.location.href = destination;
 		}, 1000);
 	}
@@ -270,8 +268,6 @@ window.onload = function() {
 		projectContainer.appendChild(swapper);
 		projectContainer.appendChild(cover);
 		setTimeout(() => {
-			projectContainer.removeChild(cover);
-			projectContainer.removeChild(swapper);
 			window.location.href = destination;
 		}, 1000);
 	}
